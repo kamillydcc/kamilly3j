@@ -1,0 +1,46 @@
+:root{
+    --cor-de-fundo:#c086e2;
+    --verde: #24e6a5;
+    --branco: #FFFFFF;
+    --botao-ativo: #22998f;
+    --botao-inativo: rgba(15, 6, 114, 0.5);
+    --texto-fundo: rgba(55, 209, 214, 0.774);
+}
+
+*{
+  background-color: var(--cor-de-fundo);
+  color: var(--branco);
+}
+
+.conteudo-principal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  /* define uma margem de 0 para cima e para baixo e automática para os lados */
+
+}
+
+.titulo-principal{
+  text-align: center;
+  width: 100%;
+  font-size: 32px;
+}
+
+.botao{
+  background-color: var(--botao-inativo);
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  /*Determina a posição horizontal no display flex*/
+  align-items: center;
+  /*Determine a posição vertical no display flex*/
+  width: 100%;
+  font-size: 18px;
+  /*controla o tamanho da fonte*/
+padding: 1em;
+/* um afastamento interno*/
+}
