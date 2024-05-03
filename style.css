@@ -1,10 +1,10 @@
 :root{
-    --cor-de-fundo:#c086e2;
-    --verde: #24e6a5;
-    --branco: #FFFFFF;
-    --botao-ativo: #22998f;
-    --botao-inativo: rgba(15, 6, 114, 0.5);
-    --texto-fundo: rgba(55, 209, 214, 0.774);
+    --cor-de-fundo:#6dce99;
+    --verde: #195742;
+    --branco: #075055;
+    --botao-ativo: #000000;
+    --botao-inativo: rgb(245, 249, 255);
+    --texto-fundo: rgba(2, 3, 3, 0.774);
 }
 
 *{
@@ -20,7 +20,6 @@
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  /* define uma margem de 0 para cima e para baixo e automática para os lados */
 
 }
 
@@ -29,18 +28,38 @@
   width: 100%;
   font-size: 32px;
 }
+.botoes{
+  display: block;
 
+}
 .botao{
   background-color: var(--botao-inativo);
-  color: aliceblue;
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
-  /*Determina a posição horizontal no display flex*/
   align-items: center;
-  /*Determine a posição vertical no display flex*/
   width: 100%;
-  font-size: 18px;
-  /*controla o tamanho da fonte*/
-padding: 1em;
-/* um afastamento interno*/
+  font-size: 18pxp;
+  padding: 1em;
+border-bottom: 4px solid var(--botao-ativo);
+border-left: 2px solid var(--botao-ativo);
+border-right: 2px solid var(--botao-ativo);
+}
+.botao:first-child{
+  border-radius: 20px 20px 0 0;
+}
+
+.botao:last-child{
+  border-radius: 0px 0px 20px 20px;
+}
+@media screen and (min-width: 700px){
+.botoes{
+  display: flex;
+ }
+ .botao:first-child{
+   border-radius: 20px 0px 0px 20px;
+ }
+ .botao:last-child{
+   border-radius: 0px 20px 20px 0px;
+ }
 }
