@@ -1,14 +1,14 @@
 :root {
-    --cor-de-fundo: #1e1e1e;
-    --verde: #0468fd;
-    --branco: #FFFFFF;
-    --botao-ativo: #3A375E;
-    --botao-inativo: rgba(58,55,94,0.5);
-    --texto-fundo: rgba(58,55,94,0.3);
+    --cor-de-fundo: #000000;
+    --verde: #8e23a3;
+    --branco: #1a7f86;
+    --botao-ativo: #56277c;
+    --botao-inativo: rgba(58,55,94,0,5);
+    --texto-fundo: rgba(58,55,94,0,3);
 }
 
 *{
-    color: var(--branco);
+    color: #ffffff;
 }
 body{
     background-color: var(--cor-de-fundo);
@@ -39,7 +39,7 @@ span{
 
 .botao{
     background-color: var(--botao-inativo);
-    color: #FFFFFF;
+    color: #fff8f8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,8 +58,7 @@ span{
 .botao:last-child{
     border-radius:0 0 20px 20px;
 }
-
-.botao.ativo{
+ .botao.ativo{
     background-color: var(--botao-ativo);
     border-bottom: 2px solid var(--verde);
 }
@@ -69,21 +68,24 @@ span{
 .aba-conteudo.ativo{
     display: block;
 }
-.abas-textos{
-    background-color: var(--botao-inativo);
-    padding: 40px;
-    border-radius: 15px;
+  
+.aba-texto{
+  background-color: var(--botao-inativo);
+  padding: 40px;
+  border-radius: 15px;
 }
+
 .aba-conteudo-titulo-principal{
     font-size: 28px;
     text-align: center;
 }
-.aba-conteudo-titulo-secundario{
-    text-align: center;
-    color: var(--verde);
-    text-transform: uppercase;
-}
 
+.aba-conteudo-titulo-secundario{
+text-align: center;
+color: var(--verde);
+text-transform: uppercase;
+
+}
 @media screen and (min-width:700px){
     .botoes{
         display: flex;
