@@ -1,20 +1,21 @@
-:root {
-    --cor-de-fundo: #1e1e1e;
-    --verde: #5FFF57;
-    --branco: #FFFFFF;
-    --botao-ativo: #3A375E;
-    --botao-inativo: rgba(58,55,94,0.5);
-    --texto-fundo: rgba(58,55,94,0.3);
+:root{
+    --cor-de-fundo: #000202;
+    --verde: #ffffff;
+    --branco: #ffffff;
+    --botao-ativo: #93d6eb;
+    --botao-inativo: rgb(61, 161, 156);
+    --texto-fundo: rgba(0, 0, 0, 0.3);
 }
 
 *{
     color: var(--branco);
 }
-body{
-    background-color: var(--cor-de-fundo);
-}
+
 span{
     color: var(--verde);
+}
+body{
+    background-color: var(--cor-de-fundo);
 }
 .conteudo-principal{
     display: flex;
@@ -22,9 +23,10 @@ span{
     justify-content: center;
     align-items: center;
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-}
 
+}
 
 .titulo-principal{
     text-align: center;
@@ -32,36 +34,38 @@ span{
     font-size: 32px;
 }
 
-.botoes{
-    display: block;
-}
-
 .botao{
     background-color: var(--botao-inativo);
-    color: #FFFFFF;
+    color: white;
     display: flex;
     justify-content: center;
+    /*Determina a posição horizontal no display flex*/
     align-items: center;
+    /*Determina a posição vertical no display flex*/
     width: 100%;
     font-size: 18px;
-    padding: 1em;
+    /*Controla o tamanho da fonte*/
+    padding: 1em ;
+    /* Um afastamento interno */
     border-bottom: 4px solid var(--botao-ativo);
     border-left: 2px solid var(--botao-ativo);
     border-right: 2px solid var(--botao-ativo);
 }
-
+.botoes{
+ display: block;   
+}
 .botao:first-child{
     border-radius: 20px 20px 0 0;
 }
 
 .botao:last-child{
-    border-radius:0 0 20px 20px;
+    border-radius: 0px 0px 20px 20px;
 }
-
 .botao.ativo{
     background-color: var(--botao-ativo);
-    border-bottom: 2px solid var(--verde);
+    border-bottom: 2px solid var(--verde) ;
 }
+
 .aba-conteudo{
     display: none;
 }
@@ -83,14 +87,29 @@ span{
     text-transform: uppercase;
 }
 
-@media screen and (min-width:700px){
+.contador{
+    display: flex;
+    justify-content: center;
+}
+
+.contador-digito-numero{
+    font-size: 100px;
+    margin: 0;
+}
+
+.contador-digito-texto{
+    color: var(--verde);
+    font-size: 20px;
+    margin: 0;
+}
+
+@media screen and (min-width: 700px){
     .botoes{
         display: flex;
     }
     .botao:first-child{
         border-radius: 20px 0 0 20px;
     }
-
     .botao:last-child{
         border-radius: 0 20px 20px 0;
     }
